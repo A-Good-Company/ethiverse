@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ethiverse Pitch Deck</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: Arial, sans-serif;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .slide {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        ul {
+            text-align: left;
+            max-width: 600px;
+        }
+        .nav-buttons {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+        }
+        button {
+            font-size: 1em;
+            padding: 10px 20px;
+            margin: 0 5px;
+            cursor: pointer;
+        }
+        #darkModeToggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+        }
+        .dark-mode {
+            background-color: #090909;
+            color: #fff;
+        }
+        .dark-mode button {
+            background-color: #555;
+            color: #fff;
+        }
+
+        /* Print styles */
+        @media print {
+            body {
+                margin: 0;
+                padding: 0;
+            }
+            .slide {
+                page-break-after: always;
+                page-break-inside: avoid;
+                height: 100vh;
+                display: flex !important;
+            }
+            .nav-buttons, #darkModeToggle {
+                display: none;
+            }
+            button {
+                display: none;
+            }
+            /* Preserve dark mode in print */
+            body.dark-mode {
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+                background-color: #333 !important;
+                color: #fff !important;
+            }
+            body.dark-mode * {
+                background-color: #333 !important;
+                color: #fff !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="slideContainer">
+        <div class="slide" id="slide1">
+            <h1>Ethiverse</h1>
+            <p>Tech Solutions by the People, for the People, of the People</p>
+        </div>
+
+        <div class="slide" id="slide2">
+            <h1>Our Mission</h1>
+            <p>To create transparent and ethical tech solutions that empower users with control over their data and experiences.</p>
+        </div>
+
+        <div class="slide" id="slide3">
+            <h1>The Problem</h1>
+            <ul>
+                <li>Current tech solutions controlled by investors</li>
+                <li>Users lack control over features and data</li>
+                <li>Quality degradation due to profit-driven motives</li>
+            </ul>
+        </div>
+
+        <div class="slide" id="slide4">
+            <h1>Our Solution</h1>
+            <ul>
+                <li>Open-source, transparent solutions</li>
+                <li>User-owned data and experiences</li>
+                <li>Ethical, community-driven development</li>
+            </ul>
+        </div>
+
+        <div class="slide" id="slide5">
+            <h1>Key Features</h1>
+            <ul>
+                <li>Secure, user-controlled data storage</li>
+                <li>AI-powered solutions with user data integration</li>
+                <li>NFT-based ownership tracking</li>
+                <li>Transparent governance through DAO concepts</li>
+            </ul>
+        </div>
+
+        <div class="slide" id="slide6">
+            <h1>Target Audience</h1>
+            <ul>
+                <li>Everyday consumers seeking ethical tech solutions</li>
+                <li>Builders and developers interested in open-source projects</li>
+                <li>Supporters of ethical technology</li>
+            </ul>
+        </div>
+
+        <div class="slide" id="slide7">
+            <h1>Business Model</h1>
+            <ul>
+                <li>Subscription-based with pay-per-use model</li>
+                <li>Token system for accessing various functionalities</li>
+                <li>Development costs shared among users</li>
+            </ul>
+        </div>
+
+        <div class="slide" id="slide8">
+            <h1>Our Advantage</h1>
+            <ul>
+                <li>Accessible open-source solutions for non-technical users</li>
+                <li>Integration of decentralized technologies with user-friendly interfaces</li>
+                <li>AI-driven language and education gap bridging</li>
+            </ul>
+        </div>
+
+        <div class="slide" id="slide9">
+            <h1>Current Status</h1>
+            <p>Prototypes and proof of concepts developed</p>
+            <p>Moving towards MVP (Minimum Viable Product)</p>
+        </div>
+
+        <div class="slide" id="slide10">
+            <h1>Team and Partnerships</h1>
+            <ul>
+                <li>Collaboration with Code Blossom for education</li>
+                <li>Partnership with Hazgeek for regulatory support</li>
+                <li>Seeking advisors and early adopters</li>
+            </ul>
+        </div>
+
+        <div class="slide" id="slide11">
+            <h1>Roadmap</h1>
+            <p><strong>Short-term:</strong> Make AI accessible globally</p>
+            <p><strong>Long-term:</strong> Create an ecosystem of transparent, ethical tech solutions</p>
+        </div>
+
+        <div class="slide" id="slide12">
+            <h1>Challenges and Solutions</h1>
+            <ul>
+                <li>Measuring contributions in collaborative projects</li>
+                <li>Balancing privacy with functionality</li>
+                <li>Developing a fair governance framework</li>
+            </ul>
+        </div>
+
+        <div class="slide" id="slide13">
+            <h1>Join Us</h1>
+            <p>We're seeking builders, designers, donors, advisors, and early adopters to join the Ethiverse community.</p>
+            <button onclick="alert('Contact form or link to be added')">Get Involved</button>
+        </div>
+
+        <div class="slide" id="slide14">
+            <h1>Contact Us</h1>
+            <p>Email: info@ethiverse.org</p>
+            <p>Twitter: @ethiverse</p>
+            <p>Website: www.ethiverse.org</p>
+        </div>
+    </div>
+    <div class="nav-buttons">
+        <button onclick="prevSlide()">Previous</button>
+        <button onclick="nextSlide()">Next</button>
+    </div>
+
+    <button id="darkModeToggle" onclick="toggleDarkMode()">Toggle Dark Mode</button>
+
+    <script>
+    let currentSlide = 1;
+    const totalSlides = document.querySelectorAll('.slide').length;
+    let isDarkMode = true; // Set initial state to true
+
+    function showSlide(slideNumber) {
+        document.querySelectorAll('.slide').forEach(slide => {
+            slide.style.display = 'none';
+        });
+        document.getElementById('slide' + slideNumber).style.display = 'flex';
+    }
+
+    function nextSlide() {
+        currentSlide = currentSlide < totalSlides ? currentSlide + 1 : 1;
+        showSlide(currentSlide);
+    }
+
+    function prevSlide() {
+        currentSlide = currentSlide > 1 ? currentSlide - 1 : totalSlides;
+        showSlide(currentSlide);
+    }
+
+    function toggleDarkMode() {
+        isDarkMode = !isDarkMode;
+        document.body.classList.toggle('dark-mode');
+        updateDarkModeButton();
+    }
+
+    function updateDarkModeButton() {
+        const darkModeButton = document.getElementById('darkModeToggle');
+        darkModeButton.textContent = isDarkMode ? 'Toggle Light Mode' : 'Toggle Dark Mode';
+    }
+
+    // Initialize dark mode
+    function initDarkMode() {
+        document.body.classList.add('dark-mode');
+        updateDarkModeButton();
+    }
+
+    showSlide(currentSlide);
+    initDarkMode(); // Call this function to set initial dark mode
+
+    // Add keyboard event listener
+    document.addEventListener('keydown', function(event) {
+        switch(event.key) {
+            case "ArrowLeft":
+                prevSlide();
+                break;
+            case "ArrowRight":
+                nextSlide();
+                break;
+        }
+    });
+</script>
+</body>
+</html>
